@@ -1,5 +1,5 @@
 const { getDb } = require("./mongo");
-const { BANGLADESH_CITIES } = require("./constant");
+// const { BANGLADESH_CITIES } = require("./constant");
 
 const getCollection = () => {
   console.log(`creating student collection`);
@@ -12,24 +12,24 @@ const getCollection = () => {
         properties: {
           name: {
             bsonType: "string",
-            required:true,
+            // required:true,
             description: "must be a string and is required",
           },
           phone: {
             bsonType: "string",
-            required:true,
+            // required:true,
             description: "must be a string and is required",
           },
           age: {
             bsonType: "int",
             minimum: 0,
             maximum: 200,
-            required:true,
+            // required:true,
             description: "must be an integer in [ 0, 200 ] and is required",
           },
           city: {
-            enum: BANGLADESH_CITIES,
-            required:true,
+            enum: ['Chittagong','Dhaka'],
+            // required:true,
             description: "can only be one of the enum values and is required",
           },
         },
